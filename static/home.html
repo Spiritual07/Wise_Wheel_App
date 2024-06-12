@@ -4,20 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Car Rental</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+    <link rel="stylesheet"  type="text/css" href="css/style.css">
+    <script src="js/script.js" defer></script>
 </head>
 <body>
     <header>
         <nav>
             <a href="{{ url_for('main.home') }}">Home</a>
-            {% if current_user.is_authenticated %}
-                <a href="{{ url_for('main.profile') }}">Profile</a>
-                <a href="{{ url_for('main.logout') }}">Logout</a>
-            {% else %}
-                <a href="{{ url_for('main.login') }}">Login</a>
-                <a href="{{ url_for('main.register') }}">Register</a>
-            {% endif %}
+            <a href="{{ url_for('main.profile') }}">Profile</a>
+            <a href="{{ url_for('main.logout') }}">Logout</a>
+            <a href="{{ url_for('main.login') }}">Login</a>
+            <a href="{{ url_for('main.register') }}">Register</a>
         </nav>
     </header>
 
@@ -46,7 +43,7 @@
     </main>
 
     <footer>
-        <p>&copy; {{ current_year }} WiseWheel Car Rental. All rights reserved.</p>
+        <p>&copy; 2024 WiseWheel Car Rental. All rights reserved.</p>
     </footer>
 </body>
 </html>
